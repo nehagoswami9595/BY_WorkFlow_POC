@@ -18,6 +18,7 @@ jobs:
   All-Prequisite-Task1:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: BYPOC_Test
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -32,6 +33,7 @@ jobs:
   All-PV-Failover-Task2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: BYPOC_Test
     needs: [All-Prequisite-Task1]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -47,6 +49,7 @@ jobs:
   All-Reporting-Task4:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: BYPOC_Test
     needs: [All-PV-Failover-Task2]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
