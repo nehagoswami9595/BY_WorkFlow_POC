@@ -15,7 +15,7 @@ jobs:
   All-Prequisite-Task2:
     # The type of runner that the job will run on
     runs-on: windows-latest
-    environment: BYPOC_Test
+    #environment: BYPOC_Test
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,13 +26,11 @@ jobs:
   All-Prequisite-Task4:
     # The type of runner that the job will run on
     runs-on: windows-latest
-    environment: BYPOC_Test
+    #environment: BYPOC_Test
     #needs: [All-Prequisite-Task3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v1
       - name: Script
-        run: .\script1.ps1
-        shell: powershell        
-          
+        run: powershell .\script1.ps1       
