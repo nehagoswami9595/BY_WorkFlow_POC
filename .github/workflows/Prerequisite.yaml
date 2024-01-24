@@ -40,4 +40,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Call first function
         run: ./script1.ps1
+        shell: pwsh
           
