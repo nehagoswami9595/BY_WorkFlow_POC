@@ -12,17 +12,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  All-Prequisite-Task1:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    environment: BYPOC_Test
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a single command using the runners shell
-      - name: Call first function
-        run: echo Call first function!!
-        
   All-Prequisite-Task2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -34,27 +23,15 @@ jobs:
       - name: Call first function
         run: echo Call first function!!
         
-  All-Prequisite-Task3:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    environment: BYPOC_Test
-    needs: [All-Prequisite-Task2]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a single command using the runners shell
-      - name: Call first function
-        run: echo Call first function!!
-
   All-Prequisite-Task4:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     environment: BYPOC_Test
-    needs: [All-Prequisite-Task3]
+    #needs: [All-Prequisite-Task3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
       - name: Call first function
-        run: echo Call first function!!
+        run: .github\scripts\script1.ps1
           
