@@ -31,6 +31,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Check out repo        
+        uses: actions/checkout@v2
+      - run: |
+          ./scripts/script1.ps1
+
       # Runs a single command using the runners shell
       - name: Call first function
         run: ./scripts/script1.ps1
