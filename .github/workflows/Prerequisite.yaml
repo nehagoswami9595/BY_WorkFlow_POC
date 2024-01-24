@@ -23,23 +23,17 @@ jobs:
       - name: Call first function
         run: echo Call first function!!
         
-  # All-Prequisite-Task4:
-  #   # The type of runner that the job will run on
-  #   runs-on: windows-latest
-  #   environment: BYPOC_Test
-  #   #needs: [All-Prequisite-Task3]
+  All-Prequisite-Task4:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+    environment: BYPOC_Test
+    #needs: [All-Prequisite-Task3]
 
-  #   # Steps represent a sequence of tasks that will be executed as part of the job
-  #   steps:
-  #     - name: Check out repo        
-  #       uses: actions/checkout@v2
-  #     - run: |
-  #         ./script1.ps1
-  #       shell: pwsh
-
-  #     # Runs a single command using the runners shell
-  #     - name: Call first function
-  #       shell: pwsh
-  #       run: ./script1.ps1
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v1
+      - name: Script
+        run: .\script.ps1
+        shell: powershell
         
           
