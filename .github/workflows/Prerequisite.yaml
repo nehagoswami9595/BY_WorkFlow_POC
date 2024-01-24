@@ -34,10 +34,10 @@ jobs:
       - name: Check out repo        
         uses: actions/checkout@v2
       - run: |
-          ./scripts/script1.ps1
+          ./script1.ps1
         shell: pwsh
 
       # Runs a single command using the runners shell
       - name: Call first function
-        run: ./scripts/script1.ps1
+        run: ./script1.ps1
           
