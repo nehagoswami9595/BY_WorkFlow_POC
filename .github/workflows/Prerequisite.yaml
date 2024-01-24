@@ -33,5 +33,5 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Call first function
-        run: .github\scripts\script1.ps1
+        run: ./scripts/script1.ps1
           
