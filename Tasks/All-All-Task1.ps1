@@ -21,6 +21,8 @@ $ENV:GITHUB_RUN_NUMBER = 45
 $ENV:GITHUB_RUN_ATTEMPT = 3
 $ENV:GITHUB_WORKFLOW_NAME = "wfname"
 $ENV:JOB_NAME = "jobname"
+$ModuleID = "10"
+$TaskID = "yuh"
 
 # Short assignments for environmental variables
 $MessageLogging = $ENV:MESSAGE_LOGGING
