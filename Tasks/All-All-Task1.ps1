@@ -10,8 +10,8 @@ param (
 )
 
 Import-Module -Name .\Modules\Module14\ -Force
-Import-Module -Name .\Modules\Module19\ -Force
-Import-Module -Name .\Modules\Module18\ -Force
+#Import-Module -Name .\Modules\Module19\ -Force
+#Import-Module -Name .\Modules\Module18\ -Force
 
 # Short assignments for environmental variables
 $MessageLogging = $ENV:MESSAGE_LOGGING
@@ -24,13 +24,13 @@ $GitHubRunAttempt = $ENV:GITHUB_RUN_ATTEMPT
 $ApplicationName = $ENV:APPLICATION_NAME
 
 
-## Transcript Logging
-try {
-  Start-CustomTranscript -CustomerId $CustomerName -GitHubWorkflowName $GitHubWorkflowName -GitHubRunNumber $ENV:GITHUB_RUN_NUMBER -GitHubRunAttemptNumber $ENV:GITHUB_RUN_ATTEMPT -JobName $JobName
-}
-catch {
-  Write-Host -ForegroundColor Red "Failed to record the transcript logging.`n" $($_.Exception | Out-String) $($_.InvocationInfo | Out-String); throw
-}
+# ## Transcript Logging
+# try {
+#   Start-CustomTranscript -CustomerId $CustomerName -GitHubWorkflowName $GitHubWorkflowName -GitHubRunNumber $ENV:GITHUB_RUN_NUMBER -GitHubRunAttemptNumber $ENV:GITHUB_RUN_ATTEMPT -JobName $JobName
+# }
+# catch {
+#   Write-Host -ForegroundColor Red "Failed to record the transcript logging.`n" $($_.Exception | Out-String) $($_.InvocationInfo | Out-String); throw
+# }
 
 # Message logging block
 if ($MessageLogging -eq $True) {
