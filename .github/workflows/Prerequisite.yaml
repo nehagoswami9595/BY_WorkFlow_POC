@@ -31,7 +31,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-        - uses: actions/checkout@v1
-        - name: Script
-          run: .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
-          shell: powershell       
+        - name: CheckOut Step
+          uses: actions/checkout@v4
+        
+        - name: Testing
+          run: |
+           (Get-Location).Path
+           .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
+          shell: pwsh       
