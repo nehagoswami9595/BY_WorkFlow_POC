@@ -9,8 +9,8 @@ param (
     [System.String]$OperationType
 )
 
-Import-Module -Name .\Modules\Module14\ -Force -Verbose
-#Import-Module -Name .\Modules\Module19\ -Force
+Import-Module -Name .\Modules\Module14\ -Force 
+Import-Module -Name .\Modules\Module19\ -Force
 #Import-Module -Name .\Modules\Module18\ -Force
 
 $ENV:MESSAGE_LOGGING = $True
