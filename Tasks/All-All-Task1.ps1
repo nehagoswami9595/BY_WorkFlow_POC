@@ -13,6 +13,15 @@ Import-Module -Name .\Modules\Module14\ -Force -Verbose
 #Import-Module -Name .\Modules\Module19\ -Force
 #Import-Module -Name .\Modules\Module18\ -Force
 
+$ENV:MESSAGE_LOGGING = $True
+$ENV:RUN_ID = "0569392b97eb7d1060d352800153af87"
+$ENV:CUSTOMER_NAME = "BYPOC"
+$ENV:APPLICATION_NAME = "TMS"
+$ENV:GITHUB_RUN_NUMBER = 45
+$ENV:GITHUB_RUN_ATTEMPT = 3
+$ENV:GITHUB_WORKFLOW_NAME = "wfname"
+$ENV:JOB_NAME = "jobname"
+
 # Short assignments for environmental variables
 $MessageLogging = $ENV:MESSAGE_LOGGING
 $RunId = $ENV:RUN_ID
