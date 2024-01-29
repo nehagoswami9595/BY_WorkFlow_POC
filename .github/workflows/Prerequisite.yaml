@@ -31,8 +31,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: azure/powershell@v1
       - name: Script
+        uses: azure/powershell@v1
         with:
           inlineScript: .\script1.ps1
           azPSVersion: "Latest"
