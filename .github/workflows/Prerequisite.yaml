@@ -35,4 +35,5 @@ jobs:
       - name: Script
         with:
           inlineScript: .\script1.ps1
+          azPSVersion: "Latest"
         #run: powershell .\script1.ps1       
