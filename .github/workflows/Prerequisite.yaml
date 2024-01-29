@@ -33,5 +33,5 @@ jobs:
     steps:
         - uses: actions/checkout@v1
         - name: Script
-          run: .\Tasks\All-All-Task1.ps1
+          run: .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
           shell: powershell       
