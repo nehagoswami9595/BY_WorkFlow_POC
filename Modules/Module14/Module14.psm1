@@ -22,10 +22,8 @@ function New-AuthHeaders {
         }
         try {
             $GetFileData = (Get-Content -path $FilePath -ErrorAction Stop | convertfrom-json)
-            $SNOWUsername = "drautomation_user"
-            #$GetFileData.SNOW.Credentials.UserName
-            $SNOWPassword = "6xp+J1,qXop?la"
-            #$GetFileData.SNOW.Credentials.Password
+            $SNOWUsername = $GetFileData.SNOW.Credentials.UserName
+            $SNOWPassword = $GetFileData.SNOW.Credentials.Password
         }
         catch { 
                 Write-host "Encountered error while getting Data from Json within Module! Filename:$($MyInvocation.MyCommand.Name), Line:" $_.InvocationInfo.ScriptLineNumber ", Exception:"$_.Exception.Message                       
