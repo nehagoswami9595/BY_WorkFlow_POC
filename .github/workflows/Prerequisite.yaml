@@ -34,6 +34,6 @@ jobs:
       - name: Script
         uses: azure/powershell@v1
         with:
-          inlineScript: .\script1.ps1
+          inlineScript: .\test.ps1
           azPSVersion: "Latest"
         #run: powershell .\script1.ps1       
