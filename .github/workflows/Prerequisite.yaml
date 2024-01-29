@@ -12,30 +12,22 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  All-Prequisite-Task2:
-    # The type of runner that the job will run on
+  Azure-OIDC2:
     runs-on: windows-latest
-    #environment: BYPOC_Test
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    environment: BYPOC_Test
     steps:
-      # Runs a single command using the runners shell
-      - name: Call first function
-        run: echo Call first function!!
-        
-  All-Prequisite-Task4:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
-    #environment: BYPOC_Test
-    #needs: [All-Prequisite-Task3]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-        - name: CheckOut Step
-          uses: actions/checkout@v4
-        
-        - name: Testing
-          run: |
-           (Get-Location).Path
-           .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
-          shell: pwsh       
+      - name: OIDC login to Azure Public Cloud with AzPowershell
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          enable-AzPSSession: true
+
+      - name: Azure login test
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            Get-AzResourceGroup
+          azPSVersion: "latest"
