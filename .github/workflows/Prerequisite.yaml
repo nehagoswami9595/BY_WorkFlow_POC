@@ -33,4 +33,6 @@ jobs:
     steps:
       - uses: azure/powershell@v1
       - name: Script
-        run: powershell .\script1.ps1       
+        with:
+          inlineScript: .\script1.ps1
+        #run: powershell .\script1.ps1       
