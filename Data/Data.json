@@ -1,1 +1,61 @@
-
+{
+  "CommonConfiguration": {
+    "Data": {
+      "ThrottleLimit": 10,
+      "ProcessingPath": "$ENV:TEMP"
+    }
+  },
+  "PesterConfiguration": {
+    "Run": {
+      "Path": [
+        "C:\\Users\\vivek.jindal\\Desktop\\vivek\\projects\\blueyonder\\code\\BY_DR\\Modules\\Module18"
+      ],
+      "Throw": "False"
+    },
+    "CodeCoverage": {
+      "Enabled": true,
+      "OutputFormat": "JaCoCo",
+      "OutputPath": "CodeCoverage.xml"
+    },
+    "TestResult": {
+      "Enabled": true,
+      "OutputFormat": "NUnitXml",
+      "OutputPath": "TestResults.xml"
+    },
+    "Should": {
+      "ErrorAction": "Stop"
+    },
+    "Output": {
+      "Verbosity": "Detailed"
+    }
+  },
+  "Module9": {
+    "All": {
+      "RpoInSeconds": 300,
+      "DBServerCodes": [
+        3,
+        12,
+        16,
+        23,
+        27
+      ],
+      "RecoveryPlanName": "Recovery-plan-09"
+    }
+  },
+  "Module17": {
+    "All-Reporting-Task4": {
+      "ReportTemplate": "DRFormat - Final.docx"
+    }
+  },
+  "Module02": {
+    "All-Failover-Task5": {
+      "CPUThreshold": 90,
+      "MemoryThreshold": 90
+    }
+  },
+  "Module14": {
+    "All-All-Task1": {
+      "SNOWURL": "https://blueyonderdev.service-now.com/api/now/table/sc_task/"
+    }
+  }
+}
