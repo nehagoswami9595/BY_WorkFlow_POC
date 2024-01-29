@@ -17,10 +17,6 @@ $ENV:MESSAGE_LOGGING = $True
 $ENV:RUN_ID = "0569392b97eb7d1060d352800153af87"
 $ENV:CUSTOMER_NAME = "BYPOC"
 $ENV:APPLICATION_NAME = "TMS"
-$ENV:GITHUB_RUN_NUMBER = 45
-$ENV:GITHUB_RUN_ATTEMPT = 3
-$ENV:GITHUB_WORKFLOW_NAME = "wfname"
-$ENV:JOB_NAME = "jobname"
 $ModuleID = "Module14"
 $TaskID = "All-All-Task1"
 
@@ -79,6 +75,7 @@ switch ($DRPhase) {
                               {
                               try{                                 
                                 $GetSNOWTask = Get-SNOWTask -SNOWTaskID $RunId -ModuleID $ModuleID -TaskID $TaskID
+                                $GetSNOWTask
                                 }
                                 catch {
                                     Write-Host -ForegroundColor Red "Failed to Get details for Task ID for `"$($RunId)`".`n" $($_.Exception | Out-String) $($_.InvocationInfo | Out-String); throw
