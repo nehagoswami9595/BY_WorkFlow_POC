@@ -27,14 +27,13 @@ jobs:
     # The type of runner that the job will run on
     runs-on: windows-latest
     #environment: BYPOC_Test
-    #needs: [All-Prequisite-Task3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
         - name: CheckOut Step
           uses: actions/checkout@v4
         
-        - name: Testing
+        - name: Execute Powershell
           run: |
            (Get-Location).Path
            .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
