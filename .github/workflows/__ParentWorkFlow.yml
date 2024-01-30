@@ -2,8 +2,8 @@
 
 name: Parent
 # Controls when the workflow will run
-on: 
-  workflow-dispatch:
+on:
+  workflow_dispatch:
   schedule:
     - cron: "*/2 * * * *"
 
