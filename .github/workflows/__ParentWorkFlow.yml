@@ -21,7 +21,5 @@ jobs:
             CronVar: 'Now'
     
       - name: Call the Prerequisite Workflow
-        if: env.CronVar != 'Now'
+        if: env.CronVar == 'Now'
         run: echo "This step will be skipped"
-      - name: Every time
-        run: echo "This step will always run"
