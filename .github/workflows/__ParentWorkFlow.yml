@@ -18,7 +18,8 @@ jobs:
         - name: CheckOut Step
           uses: actions/checkout@v4          
         
+        - uses: actions/checkout@v4 
         - name: Trigger Next WorkFlow
           if: ${{ env.vary == 'Now'  }}
-          uses: ./.github/workflows/PreFailoverValidation.yml
+          uses: ./.github/action/PreFailoverValidation
           
