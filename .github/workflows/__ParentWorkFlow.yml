@@ -20,5 +20,5 @@ jobs:
         
         - name: Trigger Next WorkFlow
           if: ${{ env.vary == 'Now'  }}
-          uses: ./.github/workflows/PreFailoverValidation.yml
+          uses: ./.github/workflows/PreFailoverValidation.yml@main
           
