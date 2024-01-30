@@ -17,5 +17,7 @@ jobs:
       steps:
         - name: Script
           run: |
-           if [ ${{env.vary}} == '11' ]; then
+           if [ '${{env.vary}}' == '11' ]; then
            echo "This is a validated"
+           else
+           echo "This is an unknown event"
