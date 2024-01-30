@@ -15,10 +15,6 @@ jobs:
       - name: Job 1
         run: echo first function!
 
-  my_job_2:
-    runs-on: windows-latest
+  call-prerequisite:
     needs: [my_job_1]
-    steps:
-      - uses: actions/checkout@v3 
-      - name: "test"
-        uses: ./.github/workflows/PreFailoverValidation.yml@main
+    uses: ./.github/workflows/PreFailoverValidation.yml
