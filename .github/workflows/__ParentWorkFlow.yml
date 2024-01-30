@@ -19,4 +19,6 @@ jobs:
     runs-on: windows-latest
     needs: [my_job_1]
     steps:
-      - uses: ./.github/workflows/PreFailoverValidation.yml
+      - uses: actions/checkout@v3 
+      - name: "test"
+        uses: ./.github/workflows/PreFailoverValidation.yml@main
