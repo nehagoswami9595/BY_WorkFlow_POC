@@ -12,4 +12,12 @@ jobs:
   my_job_1:
     runs-on: windows-latest
     steps:
-    - uses: ./.github/workflows/PreFailoverValidation.yml
+      - name: Job 1
+        run: echo first function!
+
+  my_job_2:
+    runs-on: windows-latest
+    needs: [my_job_1]
+    steps:
+      - name: Job 2
+      - uses: ./.github/workflows/PreFailoverValidation.yml
