@@ -16,6 +16,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a single command using the runners shell
-      - name: Call first function
-        run: echo Call first function!!
+      - name: Call the Prerequisite Workflow
+        if: a != a
+        run: echo "This step will be skipped"
+      - name: Every time
+        run: echo "This step will always run"
