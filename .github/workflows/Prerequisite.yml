@@ -23,6 +23,6 @@ jobs:
       - name: Call first function
         run: echo Call first function!!
         
-  Invokel-PreFailoverValidation-WorkFlow:
+  Invoke-PreFailoverValidation-WorkFlow:
     needs: [All-Prequisite-Task1]
     uses: ./.github/workflows/PreFailoverValidation.yml
