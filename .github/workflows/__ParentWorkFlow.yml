@@ -11,13 +11,10 @@ on:
 jobs:
     build:
       env:
-        vary: '11'
+        vary: 'Now'
       name: Run Script
       runs-on: windows-latest
       steps:
         - name: Script
-          run: |
-           if [[ '${{env.vary}}' == '11' ]]; then
-           echo "This is a validated"
-           else
-           echo "This is an unknown event"
+          if: ${{ ${{env.vary}} == 'Now'  }}
+          run: echo This is an immediate event
