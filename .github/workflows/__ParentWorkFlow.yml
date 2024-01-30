@@ -16,8 +16,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Generate Environment Var
+        env:
+            CronVar: 'Now'
+    
       - name: Call the Prerequisite Workflow
-        if: a != a
+        if: env.CronVar != 'Now'
         run: echo "This step will be skipped"
       - name: Every time
         run: echo "This step will always run"
