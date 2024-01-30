@@ -23,4 +23,4 @@ jobs:
            CronVar: 'Now'
 
       - name: If else Condition
-        run: echo "This step will be skipped" $CronVar
+        run: echo "This step will be skipped" env.CronVar
