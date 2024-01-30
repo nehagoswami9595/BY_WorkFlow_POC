@@ -15,6 +15,12 @@ jobs:
       name: Run Script
       runs-on: windows-latest
       steps:
+        - name: CheckOut Step
+          uses: actions/checkout@v4
+          
         - name: Script
-          if: ${{ env.vary != 'Now'  }}
-          run: echo This is an immediate event
+          if: ${{ env.vary == 'Now'  }}
+          run: |
+           (Get-Location).Path
+           .\.github\workflows\PreFailoverValidation.yml
+          shell: pwsh  
