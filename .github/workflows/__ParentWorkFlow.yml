@@ -9,5 +9,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  call-workflow-in-local-repo:
-    uses: ./.github/workflows/PreFailoverValidation.yml
+  my_job_1:
+    runs-on: windows-latest
+    steps:
+    - uses: ./.github/workflows/PreFailoverValidation.yml
