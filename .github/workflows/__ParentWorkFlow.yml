@@ -8,17 +8,10 @@ on:
     - cron: '*/2 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
+jobs:    
     build:
-      env:
-        vary: 'Now'
-      name: Run Script
       runs-on: windows-latest
       steps:
         - name: CheckOut Step
-          uses: actions/checkout@v4          
-        
-        - name: Trigger Next WorkFlow
-          if: ${{ env.vary == 'Now'  }}
           uses: ./.github/workflows/PreFailoverValidation.yml@main
           
