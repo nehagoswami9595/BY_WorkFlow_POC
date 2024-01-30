@@ -19,5 +19,4 @@ jobs:
     runs-on: windows-latest
     needs: [my_job_1]
     steps:
-      - name: Job 2
       - uses: ./.github/workflows/PreFailoverValidation.yml
