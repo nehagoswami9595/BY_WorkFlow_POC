@@ -38,4 +38,8 @@ jobs:
           run: |
            (Get-Location).Path
            .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
-          shell: pwsh       
+          shell: pwsh  
+
+  Invoke-PreFailoverValidation-WorkFlow:
+    needs: [All-PreFailoverValidation-Task2]
+    uses: ./.github/workflows/FailoverValidation.yml
