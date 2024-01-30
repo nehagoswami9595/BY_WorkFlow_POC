@@ -19,5 +19,5 @@ jobs:
       - name: Generate Environment Var
      # - name: Call first function
         run: echo Call first function!!
-       # env:
-        #    CronVar: 'Now'
+        env:
+           CronVar: 'Now'
