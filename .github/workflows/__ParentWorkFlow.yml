@@ -17,4 +17,4 @@ jobs:
 
   call-prerequisite:
     needs: [my_job_1]
-    uses: ./.github/workflows/PreFailoverValidation.yml
+    uses: ./.github/workflows/Prerequisite.yml
