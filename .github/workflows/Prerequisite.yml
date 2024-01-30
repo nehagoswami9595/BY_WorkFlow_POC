@@ -18,7 +18,13 @@ jobs:
     steps:
       - name: Pre Job 1
         run: echo first function!
+        
+  All-Prequisite-Task2:
+    runs-on: windows-latest
+    steps:
+      - name: Pre Job 2
+        run: echo first function!
 
   Invoke-PreFailoverValidation-WorkFlow:
-    needs: [All-Prequisite-Task1]
+    needs: [All-Prequisite-Task2]
     uses: ./.github/workflows/PreFailoverValidation.yml
