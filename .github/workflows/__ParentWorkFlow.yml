@@ -19,7 +19,3 @@ jobs:
       - name: Generate Environment Var
         env:
             CronVar: 'Now'
-    
-      - name: Call the Prerequisite Workflow
-        if: env.CronVar == 'Now'
-        run: echo "This step will be skipped"
