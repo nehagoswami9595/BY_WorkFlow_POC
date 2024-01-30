@@ -17,5 +17,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Generate Environment Var
-        env:
-            CronVar: 'Now'
+     # - name: Call first function
+        run: echo Call first function!!
+       # env:
+        #    CronVar: 'Now'
