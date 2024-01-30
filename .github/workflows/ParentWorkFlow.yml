@@ -4,8 +4,8 @@ name: Parent
 # Controls when the workflow will run
 on:
   workflow_dispatch:
-  #schedule:
-  #  - cron: '*/2 * * * *'
+  schedule:
+    - cron: '*/2 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,4 +17,5 @@ jobs:
 
   Invoke-Prerequisite-WorkFlowcall:
     needs: [Parent-job-1]
+    if: github.event.schedule != null
     uses: ./.github/workflows/Prerequisite.yml
