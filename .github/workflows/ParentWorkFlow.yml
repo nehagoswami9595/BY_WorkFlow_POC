@@ -17,4 +17,4 @@ jobs:
 
   Invoke-Prerequisite-WorkFlowcall:
     needs: [Parent-job-1]
-    uses: ./.github/workflows/Prerequisite.yml
+    uses: ./.github/workflows/PreFailoverValidation.yml
