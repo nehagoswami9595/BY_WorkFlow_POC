@@ -4,15 +4,15 @@ name: Parent
 # Controls when the workflow will run
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/2 * * * *'
+#  schedule:
+ #   - cron: '*/2 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   Parent-job-1:
     runs-on: windows-latest
     steps:
-      - name: Job 1
+      - name: Create CronExpression
         run: echo first function!
 
   Invoke-Prerequisite-WorkFlowcall:
