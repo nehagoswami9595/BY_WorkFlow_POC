@@ -9,18 +9,13 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  All-Prequisite-Task1:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
-    #environment: BYPOC_Test
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - name: Generate Environment Var
-     # - name: Call first function
-        run: echo Call first function!!
-        env:
-           CronVar: 'Now'
-
-      - name: If else Condition
-        run: echo "This step will be skipped" env.CronVar
+    build:
+      env:
+        vary: '11'
+      name: Run Script
+      runs-on: windows-latest
+      steps:
+        - name: Script
+          run: |
+           if [ ${{env.vary}} == '11' ]; then
+           echo "This is a validated"
