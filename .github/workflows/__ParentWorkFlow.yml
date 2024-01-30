@@ -16,5 +16,5 @@ jobs:
       runs-on: windows-latest
       steps:
         - name: Script
-          if: ${{ env.vary == 'Now'  }}
+          if: ${{ env.vary != 'Now'  }}
           run: echo This is an immediate event
