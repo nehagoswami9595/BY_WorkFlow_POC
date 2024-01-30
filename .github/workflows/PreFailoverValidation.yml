@@ -42,4 +42,4 @@ jobs:
 
   Invoke-PreFailoverValidation-WorkFlow:
     needs: [All-PreFailoverValidation-Task2]
-    uses: ./.github/workflows/FailoverValidation.yml
+    uses: ./.github/workflows/Failover.yml
