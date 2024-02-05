@@ -17,5 +17,5 @@ jobs:
 
   Invoke-Prerequisite-WorkFlowcall:
     needs: [Parent-job-1]
-    if: github.event.schedule != null
+    if: github.event.schedule == null
     uses: ./.github/workflows/Prerequisite.yml
