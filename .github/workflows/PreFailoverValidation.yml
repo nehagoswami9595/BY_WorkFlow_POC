@@ -49,7 +49,6 @@ jobs:
       - name: Plan
         id: plan
         run: |
-          <some command here executed>
           echo "exitcode=$?" >> $GITHUB_OUTPUT
         continue-on-error: true
 
