@@ -40,20 +40,9 @@ jobs:
   #          .\Tasks\All-All-Task1.ps1 -DRPhase "PreFailoverValidation" -OperationType "Get"
   #         shell: pwsh  
 
-  Invoke-PreFailoverValidation-WorkFlow-Plan:
-    name: Plan
-    runs-on: windows-latest
-    outputs:
-      exitcode: ${{ steps.plan.outputs.exitcode }}
-    steps:
-      - name: Plan
-        id: plan
-        run: |
-          echo "exitcode=$?" >> $GITHUB_OUTPUT
-        continue-on-error: true
 
   Invoke-PreFailoverValidation-WorkFlow2:
     name: Trigger
-    needs: [ Invoke-PreFailoverValidation-WorkFlow-Plan ]
-    if: needs.plan.outputs.exitcode == 0
+    needs: [All-PreFailoverValidation-Task1 ]
+    if: needs.All-PreFailoverValidation-Task1result != 'failure'
     uses: ./.github/workflows/Failover.yml
