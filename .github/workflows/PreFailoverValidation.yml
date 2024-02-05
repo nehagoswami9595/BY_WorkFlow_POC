@@ -22,7 +22,7 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Call first function
-        run: echo Call first function!!
+        run: echoz Call first function!!
         
   All-PreFailoverValidation-Task2:
     # The type of runner that the job will run on
